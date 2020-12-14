@@ -20,3 +20,19 @@ class User {
         }
     }
 }
+class item {
+    constructor(isFood,price,weight) {
+        this.isFood = isFood
+        this.price = price
+        this.weight = weight
+    }
+    isFood() {
+        return this.isFood
+    }
+    getPrice() {
+        return this.price
+    }
+    getWeight() {
+        return this.weight
+    }
+}
