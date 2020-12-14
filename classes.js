@@ -3,7 +3,7 @@ class User {
         this.username = username;
         this.password = password;
         this.primeAcc = false;
-        this.cart = new Cart();
+        this.cart = new cart();
     }
     changeUsername(newName) {
         this.username = newName;
@@ -20,8 +20,10 @@ class User {
         }
     }
 }
+
 class item {
-    constructor(isFood,price,weight) {
+    constructor(name, isFood,price,weight) {
+        this.name = name
         this.isFood = isFood
         this.price = price
         this.weight = weight
@@ -34,5 +36,14 @@ class item {
     }
     getWeight() {
         return this.weight
+    }
+}
+
+class cart {
+    constructor (items = []) {
+        this.items = items
+    }
+    addItem(item){
+        this.items.push(item)
     }
 }
